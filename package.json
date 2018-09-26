@@ -1,11 +1,13 @@
 {
-  "name": "react-starter",
+  "name": "@windingtree/wt-ui-react",
   "version": "0.0.1",
   "description": "React framework",
   "main": "dist/index.js",
   "scripts": {
+    "build": "webpack --config ./webpack/webpack.config.js --mode production",
+    "coverage": "cat coverage/lcov.info | coveralls",
     "flow": "flow",
-    "build": "webpack --config ./webpack/webpack.config.js --mode production"
+    "test": "rimraf coverage && jest --coverage"
   },
   "keywords": [
     "React",
@@ -20,10 +22,14 @@
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.2",
     "flow-bin": "^0.81.0",
+    "jest": "^23.6.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "rimraf": "^2.6.2",
     "webpack": "^4.19.1",
     "webpack-cli": "^3.1.1"
   }
