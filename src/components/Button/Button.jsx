@@ -22,3 +22,5 @@ Button.defaultProps = {
   handleClick: () => {},
   label: 'label',
 };
+
+export default Button;
