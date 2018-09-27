@@ -1,15 +1,24 @@
 /* @flow */
-import React from "react";
+import React from 'react';
 
-type Args = {
+type ArgType = {
   buttonStyle?: string,
-  handleClick?: Function,
+  handleClick?: string => void,
   label?: string
 };
 
-export default  ({buttonStyle, handleClick, label}: Args)=> (
+const Button = ({ buttonStyle, handleClick, label }: ArgType): React$Element<*> => (
   <button
-        style={buttonStyle}
-        onClick={handleClick}>{label}
+    type="button"
+    style={buttonStyle}
+    onClick={handleClick}
+  >
+    {label}
   </button>
-)
+);
+
+Button.defaultProps = {
+  buttonStyle: '',
+  handleClick: () => {},
+  label: 'label',
+};
