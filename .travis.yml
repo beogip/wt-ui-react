@@ -1,0 +1,38 @@
+
+dist: trusty
+sudo: false
+group: beta
+language: node_js
+cache:
+  directories:
+    - $HOME/.npm
+node_js:
+- 10.3.0
+jobs:
+  include:
+  - stage: test
+    script:
+    - npm run flow
+    - npm test
+    - npm run coverage
+  - stage: Deploy to GH Pages
+    before_deploy: npm run storybook-build
+    deploy:
+      provider: pages
+      skip_cleanup: true
+      local_dir: docs
+      github_token: $GITHUB_TOKEN
+      keep-history: true
+      on:
+        branch: master
+  - stage: NPM release
+    if: tag IS present
+    before_deploy: npm run build
+    deploy:
+      provider: npm
+      email: "$NPM_EMAIL"
+      skip_cleanup: true
+      api_key: "$NPM_TOKEN"
+      on:
+        repo: windingtree/wt-ui-react
+        tags: true
