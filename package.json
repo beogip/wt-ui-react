@@ -18,6 +18,10 @@
   ],
   "author": "Winding Tree devs",
   "license": "Apache-2.0",
+  "jest": {
+    "verbose": true,
+    "setupTestFrameworkScriptFile": "<rootDir>test/utils/setupTests.js"
+  },
   "dependencies": {
     "react": "^16.5.2",
     "react-dom": "^16.5.2"
@@ -32,6 +36,8 @@
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.2",
     "coveralls": "^3.0.2",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
     "eslint": "^5.6.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-flowtype": "^2.50.1",
