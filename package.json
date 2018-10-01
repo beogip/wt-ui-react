@@ -10,7 +10,7 @@
     "lint": "eslint --ext .jsx,.js src",
     "test": "rimraf coverage && jest --coverage",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -o docs"
   },
   "keywords": [
     "React",

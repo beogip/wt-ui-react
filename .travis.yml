@@ -15,6 +15,8 @@ jobs:
     - npm run flow
     - npm test
     - npm run coverage
+    - npm run build
+    - npm run build-storybook
   - stage: Deploy to GH Pages
     before_deploy: npm run storybook-build
     deploy:
