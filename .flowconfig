@@ -1,12 +1,16 @@
 [ignore]
-
+.*/@storybook/.*
+<PROJECT_ROOT>/flow-typed
 [include]
 
 [libs]
-
+flow-typed
 [lints]
 
 [options]
+module.system.node.resolve_dirname=node_modules
+module.system.node.resolve_dirname=./src
+emoji=true
 module.name_mapper.extension='png' -> '<PROJECT_ROOT>/flow/WebpackAsset.js.flow'
 module.name_mapper.extension='jpg' -> '<PROJECT_ROOT>/flow/WebpackAsset.js.flow'
 
