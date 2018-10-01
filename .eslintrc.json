@@ -1,8 +1,8 @@
 {
+  "parser": "babel-eslint",
   "extends": [
     "airbnb"
   ],
-  "parser": "babel-eslint",
   "plugins": [
     "flowtype",
     "react"
@@ -27,14 +27,6 @@
     "flowtype/object-type-delimiter": [
       2,
       "comma"
-    ],
-    "flowtype/require-parameter-type": 2,
-    "flowtype/require-return-type": [
-      2,
-      "always",
-      {
-        "annotateUndefined": "never"
-      }
     ],
     "flowtype/require-valid-file-annotation": 2,
     "flowtype/semi": [
@@ -62,11 +54,12 @@
       "always"
     ],
     "flowtype/use-flow-type": 1,
-    "flowtype/valid-syntax": 1
+    "flowtype/valid-syntax": 1,
+    "import/no-unresolved": "off",
+    "react/require-default-props": "off"
   },
-  "settings": {
-    "flowtype": {
-      "onlyFilesWithFlowAnnotation": false
-    }
+  "env": {
+    "jest": true,
+    "browser": true
   }
 }
