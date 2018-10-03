@@ -5,11 +5,16 @@
 // IMPORTANT
 // When you add this file, we won't add the default configurations which is similar
 // to "React Create App". This only has babel loader to load JavaScript.
+
 const path = require('path')
+const precss = require('precss');
+const autoprefixer = require('autoprefixer');
+
+const appSrc = path.resolve(__dirname, "../src")
 
 module.exports = {
   resolve: {
-    modules: [path.resolve(__dirname, "../src"), 'node_modules'],
+    modules: [appSrc, 'node_modules'],
     extensions: ['.js', '.jsx'],
   },
   plugins: [
@@ -17,7 +22,48 @@ module.exports = {
   ],
   module: {
     rules: [
-
+      {
+        test: /\.s?css$/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: "css-loader",
+            options: {
+              root: appSrc,
+              camelCase: true,
+              modules: true,
+              localIdentName: '[name]__[local]--[hash:base64:5]',
+              importLoaders: 2,
+            }
+        },
+          {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+                plugins: [
+                  autoprefixer,
+                  precss,
+                ]
+            }
+          },
+          "sass-loader"
+        ],
+      },
+      {
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'img/',
+              publicPath: 'img/'
+            }
+          }
+        ]
+      },
     ],
   },
 }

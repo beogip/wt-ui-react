@@ -7,7 +7,7 @@
     "build": "webpack --config ./webpack/webpack.config.js --mode production",
     "coverage": "cat coverage/lcov.info | coveralls",
     "flow": "flow",
-    "lint": "eslint --ext .jsx,.js src",
+    "lint": "eslint --fix --ext .jsx,.js src && stylelint --fix src",
     "test": "rimraf coverage && jest --coverage",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o docs"
@@ -39,6 +39,7 @@
     "@storybook/addon-links": "^3.4.11",
     "@storybook/addons": "^3.4.11",
     "@storybook/react": "^4.0.0-alpha.23",
+    "autoprefixer": "^9.1.5",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "9.0.0",
     "babel-jest": "^23.6.0",
@@ -46,6 +47,7 @@
     "babel-plugin-react-docgen": "^2.0.0",
     "babel-runtime": "^6.26.0",
     "coveralls": "^3.0.2",
+    "css-loader": "^1.0.0",
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
     "eslint": "^5.6.0",
@@ -56,7 +58,13 @@
     "eslint-plugin-react": "^7.11.1",
     "flow-bin": "^0.81.0",
     "jest": "^23.6.0",
+    "node-sass": "^4.9.3",
+    "precss": "^3.1.2",
     "rimraf": "^2.6.2",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0",
+    "stylelint": "^9.6.0",
+    "stylelint-config-sass-guidelines": "^5.2.0",
     "webpack": "^4.19.1",
     "webpack-cli": "^3.1.1"
   }

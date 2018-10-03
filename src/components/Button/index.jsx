@@ -1,5 +1,6 @@
 /* @flow */
 import React from 'react';
+import styles from './styles.scss';
 
 type PropsType = {
   /** This is an example of prop description */
@@ -8,8 +9,8 @@ type PropsType = {
   children?: React$Node
 };
 
-const Button = (props: PropsType): React$Element<*> => (
-  <button {...props} type="button" />
+const Button = (props: PropsType) => (
+  <button className={styles.test} {...props} type="button" />
 );
 
 Button.defaultProps = {
