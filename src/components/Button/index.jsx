@@ -12,7 +12,7 @@ type PropsType = {
   disabled?: boolean,
   href?: string,
   kind: 'primary' | 'accent' | 'secondary' | 'light' | 'link',
-  onClick?: string => void,
+  onClick?: SyntheticMouseEvent<> => void,
   outlined: boolean,
   size?: 'small' | 'large',
   type?: 'button' | 'reset' | 'submit'
