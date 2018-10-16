@@ -29,7 +29,10 @@
     }
   },
   "dependencies": {
+    "@windingtree/wt-ui": "^1.0.0",
+    "classnames": "^2.2.6",
     "react": "^16.5.2",
+    "react-bootstrap": "^0.32.4",
     "react-dom": "^16.5.2"
   },
   "devDependencies": {
@@ -67,6 +70,7 @@
     "precss": "^3.1.2",
     "rimraf": "^2.6.2",
     "sass-loader": "^7.1.0",
+    "sinon": "^6.3.5",
     "style-loader": "^0.23.0",
     "stylelint": "^9.6.0",
     "stylelint-config-sass-guidelines": "^5.2.0",

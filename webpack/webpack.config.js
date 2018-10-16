@@ -43,7 +43,7 @@ module.exports = {
               ident: 'postcss',
                 plugins: [
                   autoprefixer,
-                  precss,
+                  // precss, @// TODO: Check if precss is needed
                 ]
             }
           },
