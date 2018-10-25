@@ -32,7 +32,7 @@
     "@windingtree/wt-ui": "^1.0.0",
     "classnames": "^2.2.6",
     "react": "^16.5.2",
-    "react-bootstrap": "^0.32.4",
+    "react-bootstrap": "^1.0.0-beta.1",
     "react-dom": "^16.5.2"
   },
   "devDependencies": {
@@ -76,5 +76,10 @@
     "stylelint-config-sass-guidelines": "^5.2.0",
     "webpack": "^4.19.1",
     "webpack-cli": "^3.1.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   }
 }
