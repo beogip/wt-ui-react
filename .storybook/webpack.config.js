@@ -11,59 +11,12 @@ const precss = require('precss');
 const autoprefixer = require('autoprefixer');
 
 const appSrc = path.resolve(__dirname, "../src")
+const webpackConfig = require('../webpack/webpack.config.js')
 
 module.exports = {
-  resolve: {
-    modules: [appSrc, 'node_modules'],
-    extensions: ['.js', '.jsx'],
-  },
-  plugins: [
-    // your custom plugins
-  ],
+  resolve: webpackConfig.resolve,
+  plugins: webpackConfig.plugins,
   module: {
-    rules: [
-      {
-        test: /\.s?css$/,
-        use: [
-          {
-            loader: 'style-loader',
-          },
-          {
-            loader: "css-loader",
-            options: {
-              root: appSrc,
-              camelCase: true,
-              modules: true,
-              localIdentName: '[name]__[local]--[hash:base64:5]',
-              importLoaders: 2,
-            }
-        },
-          {
-            loader: 'postcss-loader',
-            options: {
-              ident: 'postcss',
-                plugins: [
-                  autoprefixer,
-                  // precss, @// TODO: Check if precss is needed
-                ]
-            }
-          },
-          "sass-loader"
-        ],
-      },
-      {
-        test: /\.(gif|png|jpe?g|svg)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'img/',
-              publicPath: 'img/'
-            }
-          }
-        ]
-      },
-    ],
-  },
+    rules: webpackConfig.module.rules.slice(1)
+  }
 }
