@@ -3,7 +3,6 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import './styles.scss';
 
-// bootstrapUtils.addStyle(Button, 'accent');
 type PropsType = {
   active?: boolean,
   block?: boolean,
