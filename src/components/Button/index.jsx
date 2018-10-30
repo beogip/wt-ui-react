@@ -1,8 +1,7 @@
 /* @flow */
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import classNames from 'classnames';
-import styles from './styles.scss';
+import './styles.scss';
 
 type PropsType = {
   active?: boolean,
@@ -11,44 +10,29 @@ type PropsType = {
   children: React$Node,
   disabled?: boolean,
   href?: string,
-  kind: 'primary' | 'accent' | 'secondary' | 'light' | 'link',
-  onClick?: SyntheticMouseEvent<> => void,
-  outlined: boolean,
-  size?: 'small' | 'large',
+  variant: 'primary' | 'accent' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'dark' | 'light' | 'link',
+  onClick?: SyntheticMouseEvent<*> => void,
+  outlined?: boolean,
+  size?: 'sm' | 'lg',
   type?: 'button' | 'reset' | 'submit'
 };
 
 const WTButton = (props: PropsType) => {
   const {
-    active, disabled, size, kind, children, className, block, outlined, ...others
+    variant, children, outlined, ...others
   } = props;
 
-  const outlineClass = `outline-${kind}`;
-  const componentClass = classNames(
-    styles.default,
-    styles[kind],
-    styles[size],
-    {
-      [styles.active]: active,
-      [styles.block]: block,
-      [styles.disabled]: disabled,
-      [styles[outlineClass]]: outlined,
-    },
-    className,
-  );
+  const finalVariant = outlined ? `outline-${variant}` : variant;
 
-  const bsProps = {
-    bsClass: componentClass,
-  };
   return (
-    <Button {...bsProps} {...others}>
+    <Button variant={finalVariant} {...others}>
       {children}
     </Button>
   );
 };
 
 WTButton.defaultProps = {
-  kind: 'primary',
+  variant: 'primary',
   type: 'button',
 };
 
