@@ -2,20 +2,20 @@
 import React from 'react';
 import BSCol from 'react-bootstrap/lib/Col';
 
-type SizeType = {
+type SizeType = true | "auto" | number | {
   span: true | "auto" | number,
   offset: number,
   order: number
-};
+} ;
 
 type PropsType = {
   children: React$Node,
   prefix: string,
-  lg?: true | "auto" | number | SizeType,
-  md?: true | "auto" | number | SizeType,
-  sm?: true | "auto" | number | SizeType,
-  xl?: true | "auto" | number | SizeType,
-  xs?: true | "auto" | number | SizeType
+  lg?: SizeType,
+  md?: SizeType,
+  sm?: SizeType,
+  xl?: SizeType,
+  xs?: SizeType
 };
 
 const WTCol = (props: PropsType) => {
