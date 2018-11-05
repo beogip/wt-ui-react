@@ -10,6 +10,6 @@ type PropsType = {
   as: React$Element<*>
 };
 
-const Header = (props: PropsType) => <BsDropdown.Header {...props} />;
+const WTHeader = (props: PropsType) => <BsDropdown.Header {...props} />;
 
-export default Header;
+export default WTHeader;

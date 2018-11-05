@@ -61,19 +61,19 @@ type PropsType = {
   onSelect?: (eventKey: any, event: SyntheticEvent<*>) => void
 };
 
-const Dropdown = (props: PropsType) => <BsDropdown {...props} />;
+const WTDropdown = (props: PropsType) => <BsDropdown {...props} />;
 
-Dropdown.Toggle = Toggle;
-Dropdown.Item = Item;
-Dropdown.Menu = Menu;
-Dropdown.Divider = Divider;
-Dropdown.Header = Header;
+WTDropdown.Toggle = Toggle;
+WTDropdown.Item = Item;
+WTDropdown.Menu = Menu;
+WTDropdown.Divider = Divider;
+WTDropdown.Header = Header;
 
-mapDisplayNames(Dropdown);
+mapDisplayNames(WTDropdown);
 
-Dropdown.defaultProps = {
+WTDropdown.defaultProps = {
   as: 'div',
   navbar: false,
 };
 
-export default Dropdown;
+export default WTDropdown;

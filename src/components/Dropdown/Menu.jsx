@@ -28,11 +28,11 @@ type PropsType = {
   as: React$Element<*>
 };
 
-const Menu = (props: PropsType) => <BsMenu {...props} />;
+const WTMenu = (props: PropsType) => <BsMenu {...props} />;
 
-Menu.defaultProps = {
+WTMenu.defaultProps = {
   alignRight: false,
   as: 'div',
 };
 
-export default Menu;
+export default WTMenu;

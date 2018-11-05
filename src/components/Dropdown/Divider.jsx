@@ -10,6 +10,6 @@ type PropsType = {
   as: React$Element<*>
 };
 
-const Divider = (props: PropsType) => <BsDropdown.Divider {...props} />;
+const WTDivider = (props: PropsType) => <BsDropdown.Divider {...props} />;
 
-export default Divider;
+export default WTDivider;

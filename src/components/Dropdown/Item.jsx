@@ -42,12 +42,12 @@ type PropsType<EK> = {
   as: React$Element<*>
 };
 
-const Item = <EK>(props: PropsType<EK>) => <BsItem {...props} />;
+const WTItem = <EK>(props: PropsType<EK>) => <BsItem {...props} />;
 
-Item.defaultProps = {
+WTItem.defaultProps = {
   as: SafeAnchor,
   disabled: false,
 };
 
 
-export default Item;
+export default WTItem;

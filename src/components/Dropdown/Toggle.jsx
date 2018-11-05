@@ -20,10 +20,10 @@ type PropsType = {
   as: React$Element<*>
 };
 
-const Toggle = (props: PropsType) => <BsToggle {...props} />;
+const WTToggle = (props: PropsType) => <BsToggle {...props} />;
 
-Toggle.defaultProps = {
+WTToggle.defaultProps = {
   as: Button,
 };
 
-export default Toggle;
+export default WTToggle;
