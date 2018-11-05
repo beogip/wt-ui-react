@@ -9,14 +9,13 @@ type SizeType = {
 };
 
 type PropsType = {
-  as: React$Node,
   children: React$Node,
   prefix: string,
-  lg: true | "auto" | number | SizeType,
-  md: true | "auto" | number | SizeType,
-  sm: true | "auto" | number | SizeType,
-  xl: true | "auto" | number | SizeType,
-  xs: true | "auto" | number | SizeType
+  lg?: true | "auto" | number | SizeType,
+  md?: true | "auto" | number | SizeType,
+  sm?: true | "auto" | number | SizeType,
+  xl?: true | "auto" | number | SizeType,
+  xs?: true | "auto" | number | SizeType
 };
 
 const WTCol = (props: PropsType) => {
@@ -32,7 +31,6 @@ const WTCol = (props: PropsType) => {
 };
 
 WTCol.defaultProps = {
-  as: 'div',
   prefix: 'col',
 };
 
