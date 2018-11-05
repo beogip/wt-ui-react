@@ -1,6 +1,6 @@
 /* @flow */
 import React from 'react';
-import Row from 'react-bootstrap/lib/Row';
+import BSRow from 'react-bootstrap/lib/Row';
 
 type PropsType = {
   as: React$Node,
@@ -15,14 +15,14 @@ const WTRow = (props: PropsType) => {
   } = props;
 
   return (
-    <Row {...otherProps}>
+    <BSRow {...otherProps}>
       {children}
-    </Row>
+    </BSRow>
   );
 };
 
 WTRow.defaultProps = {
-  as: '<div>',
+  as: 'div',
   noGutters: false,
   prefix: 'row',
 };

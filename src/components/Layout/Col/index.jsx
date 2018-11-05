@@ -1,6 +1,6 @@
 /* @flow */
 import React from 'react';
-import Col from 'react-bootstrap/lib/Col';
+import BSCol from 'react-bootstrap/lib/Col';
 
 type SizeType = {
   span: true | "auto" | number,
@@ -25,14 +25,14 @@ const WTCol = (props: PropsType) => {
   } = props;
 
   return (
-    <Col {...otherProps}>
+    <BSCol {...otherProps}>
       {children}
-    </Col>
+    </BSCol>
   );
 };
 
 WTCol.defaultProps = {
-  as: '<div>',
+  as: 'div',
   prefix: 'col',
 };
 

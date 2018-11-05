@@ -1,6 +1,6 @@
 /* @flow */
 import React from 'react';
-import Container from 'react-bootstrap/lib/Container';
+import BSContainer from 'react-bootstrap/lib/Container';
 
 type PropsType = {
   as: React$Node,
@@ -15,14 +15,14 @@ const WTContainer = (props: PropsType) => {
   } = props;
 
   return (
-    <Container {...otherProps}>
+    <BSContainer {...otherProps}>
       {children}
-    </Container>
+    </BSContainer>
   );
 };
 
 WTContainer.defaultProps = {
-  as: '<div>',
+  as: 'div',
   fluid: false,
   prefix: 'container',
 };
