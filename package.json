@@ -8,6 +8,7 @@
     "coverage": "cat coverage/lcov.info | coveralls",
     "flow": "flow",
     "lint": "eslint --ext .jsx,.js src && stylelint src",
+    "lint:fix": "eslint --fix --ext .jsx,.js src && stylelint --fix src",
     "test": "rimraf coverage && jest --coverage",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o docs"
