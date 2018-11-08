@@ -1,6 +1,6 @@
 {
   "name": "@windingtree/wt-ui-react",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React framework",
   "main": "dist/index.js",
   "scripts": {
@@ -29,7 +29,7 @@
     }
   },
   "dependencies": {
-    "@windingtree/wt-ui": "^1.1.0",
+    "@windingtree/wt-ui": "^1.1.1",
     "classnames": "^2.2.6",
     "react": "^16.5.2",
     "react-bootstrap": "^1.0.0-beta.1",
@@ -81,5 +81,8 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

@@ -1,7 +1,6 @@
 /* @flow */
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import './styles.scss';
 
 type PropsType = {
   active?: boolean,
