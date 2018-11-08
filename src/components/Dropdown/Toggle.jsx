@@ -11,7 +11,7 @@ type PropsType = {
   /**
    * An html id attribute, necessary for assistive technologies, such as screen readers.
    */
-  id: string | number,
+  id?: string | number,
 
   split?: boolean,
   /**

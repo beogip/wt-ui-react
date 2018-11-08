@@ -1,13 +1,14 @@
 {
   "name": "@windingtree/wt-ui-react",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "React framework",
   "main": "dist/index.js",
   "scripts": {
     "build": "webpack --config ./webpack/webpack.config.js --mode production",
     "coverage": "cat coverage/lcov.info | coveralls",
     "flow": "flow",
-    "lint": "eslint --fix --ext .jsx,.js src && stylelint --fix src",
+    "lint": "eslint --ext .jsx,.js src && stylelint src",
+    "lint:fix": "eslint --fix --ext .jsx,.js src && stylelint --fix src",
     "test": "rimraf coverage && jest --coverage",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o docs"
@@ -26,7 +27,11 @@
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|scss)$": "identity-obj-proxy"
-    }
+    },
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ]
   },
   "dependencies": {
     "@windingtree/wt-ui": "^1.1.1",
