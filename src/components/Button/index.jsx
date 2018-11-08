@@ -1,19 +1,39 @@
 /* @flow */
 import React from 'react';
+import { Button } from 'react-bootstrap';
+import './styles.scss';
 
 type PropsType = {
-  /** This is an example of prop description */
-  style?: {},
-  onClick: string => void,
-  children?: React$Node
+  active?: boolean,
+  block?: boolean,
+  className?: string,
+  children: React$Node,
+  disabled?: boolean,
+  href?: string,
+  variant: 'primary' | 'accent' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'dark' | 'light' | 'link',
+  onClick?: SyntheticMouseEvent<*> => void,
+  outlined?: boolean,
+  size?: 'sm' | 'lg',
+  type?: 'button' | 'reset' | 'submit'
 };
 
-const Button = (props: PropsType): React$Element<*> => (
-  <button {...props} type="button" />
-);
+const WTButton = (props: PropsType) => {
+  const {
+    variant, children, outlined, ...others
+  } = props;
 
-Button.defaultProps = {
-  style: { color: 'green' },
+  const finalVariant = outlined ? `outline-${variant}` : variant;
+
+  return (
+    <Button variant={finalVariant} {...others}>
+      {children}
+    </Button>
+  );
 };
 
-export default Button;
+WTButton.defaultProps = {
+  variant: 'primary',
+  type: 'button',
+};
+
+export default WTButton;
