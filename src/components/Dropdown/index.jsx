@@ -16,7 +16,7 @@ type PropsType = {
   /**
    * You can use a custom element type for this component.
    */
-  as: React$Element<*>,
+  as: React$Element<*> | string,
 
   /**
    * Align the menu to the right side of the Dropdown toggle

@@ -11,7 +11,7 @@ type PropsType = {
    */
   children: React$Node,
 
-  as: React$Element<*>
+  as: React$Element<*> | string
 };
 
 const WTToggle = (props: PropsType) => (

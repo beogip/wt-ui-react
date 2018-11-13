@@ -26,16 +26,16 @@ type PropsType = {
   /** A callback fired when the `NavLink` is selected.
    */
   // eslint-disable-next-line flowtype/no-weak-types
-  onSelect: (eventKey: any, event: SyntheticEvent<*>) => void,
+  onSelect?: (eventKey: any, event: SyntheticEvent<*>) => void,
 
   /**
    * Uniquely idenifies the `NavItem` amoungst its siblings,
    * used to determine and control the active state ofthe parent `Nav`
    */
   // eslint-disable-next-line flowtype/no-weak-types
-  eventKey: any,
+  eventKey?: any,
 
-  as: React$Element<*>
+  as: React$Element<*> | string
 };
 
 const WTLink = (props: PropsType) => (
