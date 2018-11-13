@@ -52,7 +52,12 @@ type StateType = {
 };
 
 export default class ToggleButton extends React.Component<PropsType, StateType> {
-  state = { focused: false };
+  constructor(props: PropsType) {
+    super(props);
+    this.state = {
+      focused: false,
+    };
+  }
 
   handleFocus = (e: SyntheticInputEvent<*>) => {
     if (e.target.tagName === 'INPUT') this.setState({ focused: true });
