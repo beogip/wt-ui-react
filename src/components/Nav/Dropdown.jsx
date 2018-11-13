@@ -33,7 +33,7 @@ type PropsType = {
    *
    * _see [DropdownMenu](#menu-props) for more details_
    */
-  rootCloseEvent: 'click' | 'mousedown'
+  rootCloseEvent?: 'click' | 'mousedown'
 };
 
 

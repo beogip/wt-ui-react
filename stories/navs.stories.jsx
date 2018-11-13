@@ -2,10 +2,10 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 import { withKnobs, radios } from '@storybook/addon-knobs';
+import { action } from '@storybook/addon-actions';
 import Nav from 'components/Nav';
 
 import '@windingtree/wt-ui/dist/styles.css';
-import { action } from '@storybook/addon-actions';
 
 const stories = storiesOf('Navs', module);
 stories.addDecorator(withKnobs);

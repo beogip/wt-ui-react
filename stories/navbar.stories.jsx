@@ -1,8 +1,8 @@
-/* eslint-disable import/no-extraneous-dependencies */
+// @flow
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { withKnobs, radios, text } from '@storybook/addon-knobs';
+import { withKnobs, select, text } from '@storybook/addon-knobs/react';
 import Navbar from 'components/Navbar';
 import Nav from 'components/Nav';
 import Container from 'components/Layout/Container';
@@ -18,7 +18,7 @@ const variantOptions = {
 };
 
 stories.add('Base Example', () => (
-  <Navbar expand="lg" variant={radios('variant', variantOptions, 'light')} bg={text('bg')}>
+  <Navbar expand="lg" variant={select('variant', variantOptions, 'light')} bg={text('bg', '')}>
     <Container>
       <Navbar.Brand href="#home" as="a" className="mr-2" />
       <Navbar.Toggle aria-controls="basic-navbar-nav" className="border-0">

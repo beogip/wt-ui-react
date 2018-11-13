@@ -13,7 +13,7 @@ type PropsType = {
   onClick?: SyntheticMouseEvent<*> => void,
   outlined?: boolean,
   size?: 'sm' | 'lg',
-  type?: 'button' | 'reset' | 'submit'
+  type: ?('button' | 'reset' | 'submit')
 };
 
 const WTButton = (props: PropsType) => {
