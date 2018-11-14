@@ -39,7 +39,7 @@ type PropsType<EK> = {
   /**
    * You can use a custom element type for this component.
    */
-  as: React$Element<*>
+  as: React$Element<*> | string
 };
 
 const WTItem = <EK>(props: PropsType<EK>) => <BsItem {...props} />;

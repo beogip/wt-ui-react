@@ -1,9 +1,9 @@
-/* eslint-disable import/no-extraneous-dependencies */
+// @flow
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, radios } from '@storybook/addon-knobs';
+import { withKnobs, select } from '@storybook/addon-knobs/react';
 import Dropdown from 'components/Dropdown';
 
 import '@windingtree/wt-ui/dist/styles.css';
@@ -25,7 +25,7 @@ const variantOptions = {
 
 stories.add('Primary', () => (
   <Dropdown>
-    <Dropdown.Toggle id="toggle" variant={radios('variant', variantOptions)}>
+    <Dropdown.Toggle id="toggle" variant={select('variant', variantOptions)}>
         Some button
     </Dropdown.Toggle>
     <Dropdown.Menu>

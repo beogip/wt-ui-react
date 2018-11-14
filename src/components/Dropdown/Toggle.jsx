@@ -11,13 +11,13 @@ type PropsType = {
   /**
    * An html id attribute, necessary for assistive technologies, such as screen readers.
    */
-  id: string | number,
+  id?: string | number,
 
   split?: boolean,
   /**
    * You can use a custom element type for this component.
    */
-  as: React$Element<*>
+  as: React$Element<*> | string
 };
 
 const WTToggle = (props: PropsType) => <BsToggle {...props} />;

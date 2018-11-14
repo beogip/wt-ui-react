@@ -2,14 +2,13 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import '@windingtree/wt-ui/dist/styles.css';
-
 import List from 'components/List';
+
+import '@windingtree/wt-ui/dist/styles.css';
 
 storiesOf('List', module)
   .add('List group', () => (
-    <List variant='flush'>
+    <List variant="flush">
       <List.Item>
         Item 1
       </List.Item>
@@ -20,13 +19,13 @@ storiesOf('List', module)
   ))
   .add('Action list group', () => (
     <List>
-      <List.Item variant='secondary' action>
+      <List.Item variant="secondary" action>
         Item 1
       </List.Item>
-      <List.Item variant='secondary' action>
+      <List.Item variant="secondary" action>
         Item 2
       </List.Item>
-      <List.Item variant='secondary' action disabled>
+      <List.Item variant="secondary" action disabled>
         Item 3
       </List.Item>
     </List>

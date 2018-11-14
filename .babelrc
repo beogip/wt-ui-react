@@ -4,5 +4,8 @@
     "@babel/preset-react",
     "@babel/preset-flow"
   ],
-  "plugins": ["react-docgen"]
+  "plugins": [
+    "react-docgen",
+    "@babel/plugin-proposal-class-properties"
+  ]
 }
