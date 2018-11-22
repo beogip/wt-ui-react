@@ -2,9 +2,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Container from 'components/Layout/Container';
-import Col from 'components/Layout/Col';
-import Row from 'components/Layout/Row';
+import Container from 'components/layout/Container';
+import Col from 'components/layout/Col';
+import Row from 'components/layout/Row';
 
 describe('Layout', () => {
   describe('<Container />', () => {

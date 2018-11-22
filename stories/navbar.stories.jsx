@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, select, text } from '@storybook/addon-knobs/react';
 import Navbar from 'components/Navbar';
 import Nav from 'components/Nav';
-import Container from 'components/Layout/Container';
+import Container from 'components/layout/Container';
 
 import '@windingtree/wt-ui/dist/styles.css';
 

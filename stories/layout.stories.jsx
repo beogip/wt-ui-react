@@ -2,9 +2,9 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import Container from 'components/Layout/Container';
-import Row from 'components/Layout/Row';
-import Col from 'components/Layout/Col';
+import Container from 'components/layout/Container';
+import Row from 'components/layout/Row';
+import Col from 'components/layout/Col';
 import Button from 'components/Button';
 
 import '@windingtree/wt-ui/dist/styles.css';

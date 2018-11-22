@@ -61,6 +61,10 @@ module.exports = {
           }
         ]
       },
+      {
+        test: /\.(eot|woff|woff2|ttf)$/,
+        loader: 'url-loader?limit=30000&name=[name]-[hash].[ext]'
+      },
     ],
   },
 };
