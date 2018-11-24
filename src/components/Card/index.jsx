@@ -1,24 +1,25 @@
 /* @flow */
 import React from 'react';
 import BSCard from 'react-bootstrap/lib/Card';
+import mapDisplayNames from 'utils/componentNames';
 
 import WTBody from './Body';
 import WTImage from './Image';
-import WTImageOverlay from './image-overlay';
+import WTImageOverlay from './ImageOverlay';
 
 type PropsType = {
   /**
    * You can use a custom element type for this component.
    */
-  as?: string,
+  as: React$Element<*> | string,
   /**
    * Sets card background.
    */
-  kind?: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'dark' | 'light',
+  variant?: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'dark' | 'light',
   /**
    * Creates a Card with a Card.Body inside passing the children directly to it.
    */
-  body?: boolean,
+  body: boolean,
   /**
    * Sets card border color
    */
@@ -29,15 +30,13 @@ type PropsType = {
   text?: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'dark' | 'light' | 'muted'
 };
 
-const WTCard = (props: PropsType) => {
-  const { kind, ...others } = props;
-
-  return <BSCard variant={kind} {...others} />;
-};
+const WTCard = (props: PropsType) => (<BSCard {...props} />);
 
 WTCard.Body = WTBody;
 WTCard.Image = WTImage;
 WTCard.ImageOverlay = WTImageOverlay;
+
+mapDisplayNames(WTCard);
 
 WTCard.defaultProps = {
   as: 'div',
