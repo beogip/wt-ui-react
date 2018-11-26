@@ -1,8 +1,8 @@
 {
   "name": "@windingtree/wt-ui-react",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "React framework",
-  "main": "dist/index.js",
+  "main": "dist/main.js",
   "scripts": {
     "build": "webpack --config ./webpack/webpack.config.js --mode production",
     "coverage": "cat coverage/lcov.info | coveralls",
