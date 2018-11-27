@@ -14,3 +14,4 @@ export { default as Nav } from './components/Nav';
 export { default as Navbar } from './components/Navbar';
 export { default as Tabs } from './components/Tabs';
 export { default as Tab } from './components/Tab';
+export { default as Form } from './components/Form';
