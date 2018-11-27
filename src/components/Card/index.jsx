@@ -6,6 +6,10 @@ import mapDisplayNames from 'utils/componentNames';
 import WTBody from './Body';
 import WTImage from './Image';
 import WTImageOverlay from './ImageOverlay';
+import WTLink from './Link';
+import WTSubtitle from './Subtitle';
+import WTText from './Text';
+import WTTitle from './Title';
 
 type PropsType = {
   /**
@@ -35,7 +39,10 @@ const WTCard = (props: PropsType) => (<BSCard {...props} />);
 WTCard.Body = WTBody;
 WTCard.Image = WTImage;
 WTCard.ImageOverlay = WTImageOverlay;
-
+WTCard.Link = WTLink;
+WTCard.Subtitle = WTSubtitle;
+WTCard.Title = WTTitle;
+WTCard.Text = WTText;
 mapDisplayNames(WTCard);
 
 WTCard.defaultProps = {
