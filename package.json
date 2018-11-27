@@ -1,6 +1,6 @@
 {
   "name": "@windingtree/wt-ui-react",
-  "version": "0.7.1",
+  "version": "0.8.0",
   "description": "React framework",
   "main": "dist/main.js",
   "scripts": {
