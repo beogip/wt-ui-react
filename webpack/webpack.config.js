@@ -3,6 +3,19 @@ const precss = require('precss');
 const autoprefixer = require('autoprefixer');
 
 const appSrc = path.resolve(__dirname, "../src")
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+
+// the path(s) that should be cleaned
+let pathsToClean = [
+  'dist',
+]
+
+// the clean options to use
+let cleanOptions = {
+  root:     path.resolve(__dirname, '../'),
+  verbose:  true,
+  dry:      false
+}
 
 module.exports = {
   resolve: {
@@ -10,8 +23,13 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
   plugins: [
-    // your custom plugins
+    new CleanWebpackPlugin(pathsToClean, cleanOptions)
   ],
+  output: {
+    libraryTarget: 'commonjs',
+    path: path.resolve(__dirname, '../dist/main.js'),
+    filename: 'index.js',
+  },
   optimization: {
     minimize: false
   },

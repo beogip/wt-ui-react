@@ -15,7 +15,7 @@ const webpackConfig = require('../webpack/webpack.config.js')
 
 module.exports = {
   resolve: webpackConfig.resolve,
-  plugins: webpackConfig.plugins,
+  // plugins: webpackConfig.plugins,
   module: {
     rules: webpackConfig.module.rules.slice(1)
   }
