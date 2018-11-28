@@ -27,8 +27,8 @@ module.exports = {
   ],
   output: {
     libraryTarget: 'commonjs',
-    path: path.resolve(__dirname, '../dist/main.js'),
-    filename: 'index.js',
+    path: path.resolve(__dirname, '../dist/'),
+    filename: 'main.js',
   },
   optimization: {
     minimize: false
