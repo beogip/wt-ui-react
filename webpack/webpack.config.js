@@ -12,6 +12,9 @@ module.exports = {
   plugins: [
     // your custom plugins
   ],
+  optimization: {
+    minimize: false
+  },
   module: {
     rules: [
       {
