@@ -12,6 +12,7 @@ import '@windingtree/wt-ui/dist/styles.css';
 
 const variantOptions = {
   primary: 'primary',
+  accent: 'accent',
   secondary: 'secondary',
   light: 'light',
   dark: 'dark',

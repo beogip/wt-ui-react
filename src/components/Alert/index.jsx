@@ -1,6 +1,6 @@
 /* @flow */
 import React from 'react';
-import { Alert } from 'react-bootstrap';
+import Alert from 'react-bootstrap/lib/Alert';
 import WTLink from './Link';
 import WTHeading from './Heading';
 
@@ -10,7 +10,7 @@ type PropsType = {
   onClose?: SyntheticMouseEvent<*> => void,
   closeLabel?: string,
   children: React$Node,
-  variant: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'light' | 'dark'
+  variant: 'primary' | 'accent' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'light' | 'dark'
 };
 
 const WTAlert = (props: PropsType) => {
