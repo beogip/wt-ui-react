@@ -2,7 +2,6 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 import '@windingtree/wt-ui/dist/styles.css';
 
 import Footer from 'components/Footer';
@@ -16,10 +15,10 @@ import Solutions from 'components/Footer/Solutions';
 
 storiesOf('Footer', module)
   .add('Baisc Footer', () => (
-  <Footer>
-    <About />
-    <Developers />
-  </Footer>
+    <Footer>
+      <About />
+      <Developers />
+    </Footer>
   ))
   .add('Full Footer', () => (
     <Footer>
@@ -30,4 +29,4 @@ storiesOf('Footer', module)
       <Solutions />
       <Contacts />
     </Footer>
-    ));
+  ));
