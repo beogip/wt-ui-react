@@ -6,6 +6,14 @@
   ],
   "plugins": [
     "react-docgen",
-    "@babel/plugin-proposal-class-properties"
+    "@babel/plugin-proposal-class-properties",
+    [
+      "module-resolver",
+      {
+        "root": [
+          "./src"
+        ]
+      }
+    ]
   ]
 }
