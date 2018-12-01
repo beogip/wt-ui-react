@@ -1,6 +1,6 @@
 /* @flow */
 import React from 'react';
-import ModalDialog from 'react-bootstrap/lib/ModalDialog';
+import BSModalDialog from 'react-bootstrap/lib/ModalDialog';
 
 
 type PropsType = {
@@ -15,7 +15,7 @@ type PropsType = {
 
 const WTDialog = (props: PropsType) => {
   const { children, ...restProps } = props;
-  return (<ModalDialog {...restProps}>{children}</ModalDialog>);
+  return (<BSModalDialog {...restProps}>{children}</BSModalDialog>);
 };
 
 WTDialog.defaultProps = {

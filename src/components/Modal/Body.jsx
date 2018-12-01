@@ -1,6 +1,6 @@
 /* @flow */
 import React from 'react';
-import ModalBody from 'react-bootstrap/lib/ModalBody';
+import BSModalBody from 'react-bootstrap/lib/ModalBody';
 
 
 type PropsType = {
@@ -10,7 +10,7 @@ type PropsType = {
   as: React$ComponentType<*> | string
 };
 
-const WTBody = (props: PropsType) => (<ModalBody {...props} />);
+const WTBody = (props: PropsType) => (<BSModalBody {...props} />);
 
 WTBody.defaultProps = {
   as: 'div',

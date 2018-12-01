@@ -1,6 +1,6 @@
 /* @flow */
 import React from 'react';
-import ModalFooter from 'react-bootstrap/lib/ModalFooter';
+import BSModalFooter from 'react-bootstrap/lib/ModalFooter';
 
 
 type PropsType = {
@@ -10,7 +10,7 @@ type PropsType = {
   as: React$ComponentType<*> | string
 };
 
-const WTFooter = (props: PropsType) => (<ModalFooter {...props} />);
+const WTFooter = (props: PropsType) => (<BSModalFooter {...props} />);
 
 WTFooter.defaultProps = {
   as: 'div',

@@ -1,6 +1,6 @@
 /* @flow */
 import React from 'react';
-import ModalHeader from 'react-bootstrap/lib/ModalHeader';
+import BSModalHeader from 'react-bootstrap/lib/ModalHeader';
 
 
 type PropsType = {
@@ -15,7 +15,7 @@ type PropsType = {
 
 const WTHeader = (props: PropsType) => {
   const { children, ...restProps } = props;
-  return (<ModalHeader {...restProps}>{children}</ModalHeader>);
+  return (<BSModalHeader {...restProps}>{children}</BSModalHeader>);
 };
 
 WTHeader.defaultProps = {

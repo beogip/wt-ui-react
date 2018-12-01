@@ -1,6 +1,6 @@
 /* @flow */
 import React from 'react';
-import ModalTitle from 'react-bootstrap/lib/ModalTitle';
+import BSModalTitle from 'react-bootstrap/lib/ModalTitle';
 
 
 type PropsType = {
@@ -10,7 +10,7 @@ type PropsType = {
   as: React$ComponentType<*> | string
 };
 
-const WTTitle = (props: PropsType) => (<ModalTitle {...props} />);
+const WTTitle = (props: PropsType) => (<BSModalTitle {...props} />);
 
 WTTitle.defaultProps = {
   as: 'h4',

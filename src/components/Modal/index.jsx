@@ -1,11 +1,11 @@
 /* @flow */
 import React from 'react';
-import Modal from 'react-bootstrap/lib/Modal';
-import ModalDialog from './Dialog';
-import Body from './Body';
-import Footer from './Footer';
-import Header from './Header';
-import Title from './Title';
+import BSModal from 'react-bootstrap/lib/Modal';
+import WTModalDialog from './Dialog';
+import WTBody from './Body';
+import WTFooter from './Footer';
+import WTHeader from './Header';
+import WTTitle from './Title';
 
 type PropsType = {
   /**
@@ -35,7 +35,7 @@ type PropsType = {
 
 const WTModal = (props: PropsType) => {
   const { children, ...restProps } = props;
-  return <Modal {...restProps}>{children}</Modal>;
+  return <BSModal {...restProps}>{children}</BSModal>;
 };
 
 WTModal.defaultProps = {
@@ -46,13 +46,13 @@ WTModal.defaultProps = {
   enforceFocus: true,
   restoreFocus: true,
   animation: true,
-  dialogAs: ModalDialog,
+  dialogAs: WTModalDialog,
 };
 
-WTModal.Body = Body;
-WTModal.Header = Header;
-WTModal.Title = Title;
-WTModal.Footer = Footer;
-WTModal.Dialog = ModalDialog;
+WTModal.Body = WTBody;
+WTModal.Header = WTHeader;
+WTModal.Title = WTTitle;
+WTModal.Footer = WTFooter;
+WTModal.Dialog = WTModalDialog;
 
 export default WTModal;
