@@ -1,6 +1,7 @@
 /* @flow */
 import React from 'react';
 import BSModal from 'react-bootstrap/lib/Modal';
+import mapDisplayNames from 'utils/componentNames';
 import WTModalDialog from './Dialog';
 import WTBody from './Body';
 import WTFooter from './Footer';
@@ -54,5 +55,6 @@ WTModal.Header = WTHeader;
 WTModal.Title = WTTitle;
 WTModal.Footer = WTFooter;
 WTModal.Dialog = WTModalDialog;
+mapDisplayNames(WTModal);
 
 export default WTModal;
