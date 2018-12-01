@@ -1,6 +1,6 @@
 /* @flow */
 import React from 'react';
-import BSCard from 'react-bootstrap/lib/Card';
+import BSModalFooter from 'react-bootstrap/lib/ModalFooter';
 
 
 type PropsType = {
@@ -10,11 +10,11 @@ type PropsType = {
   as: React$ComponentType<*> | string
 };
 
-const WTImageOverlay = (props: PropsType) => (<BSCard.ImgOverlay {...props} />);
+const WTFooter = (props: PropsType) => (<BSModalFooter {...props} />);
 
-WTImageOverlay.defaultProps = {
+WTFooter.defaultProps = {
   as: 'div',
 };
 
 
-export default WTImageOverlay;
+export default WTFooter;

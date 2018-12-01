@@ -17,3 +17,5 @@ export { default as Tabs } from './components/Tabs';
 export { default as Tab } from './components/Tab';
 export { default as Form } from './components/Form';
 export { default as Image } from './components/Image';
+export { default as Card } from './components/Card';
+export { default as Modal } from './components/Modal';

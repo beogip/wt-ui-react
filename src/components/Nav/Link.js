@@ -35,7 +35,7 @@ type PropsType = {
   // eslint-disable-next-line flowtype/no-weak-types
   eventKey?: any,
 
-  as: React$Element<*> | string
+  as: React$ComponentType<*> | string
 };
 
 const WTLink = (props: PropsType) => (

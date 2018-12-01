@@ -9,7 +9,7 @@ type PropsType = {
    */
   size?: 'sm' | 'lg',
 
-  as: React$Element<*> | string
+  as: React$ComponentType<*> | string
 };
 
 const WTInputGroup = (props: PropsType) => (

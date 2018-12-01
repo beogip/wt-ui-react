@@ -24,7 +24,7 @@ type PropsType = {
      */
     role: string,
     children: React$Node,
-    as: React$Element<*> | string
+    as: React$ComponentType<*> | string
   };
 
 const WTButtonGroup = (props: PropsType) => (
