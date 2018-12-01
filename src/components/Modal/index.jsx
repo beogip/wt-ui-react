@@ -23,13 +23,13 @@ type PropsType = {
   enforceFocus?: boolean,
   restoreFocus?: boolean,
   show?: boolean,
-  onHide: SyntheticMouseEvent<*> => void,
-  onEnter: SyntheticMouseEvent<*> => void,
-  onEntering: SyntheticMouseEvent<*> => void,
-  onEntered: SyntheticMouseEvent<*> => void,
-  onExit: SyntheticMouseEvent<*> => void,
-  onExiting: SyntheticMouseEvent<*> => void,
-  onExited: SyntheticMouseEvent<*> => void,
+  onHide?: (SyntheticMouseEvent<*>) => void,
+  onEnter?: (SyntheticMouseEvent<*>) => void,
+  onEntering?: (SyntheticMouseEvent<*>) => void,
+  onEntered?: (SyntheticMouseEvent<*>) => void,
+  onExit?: (SyntheticMouseEvent<*>) => void,
+  onExiting?: (SyntheticMouseEvent<*>) => void,
+  onExited?: (SyntheticMouseEvent<*>) => void,
   children: React$Node
 };
 
