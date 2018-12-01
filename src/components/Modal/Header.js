@@ -9,7 +9,7 @@ type PropsType = {
    */
   closeButton: boolean,
   closeLabel: string,
-  onHide: SyntheticMouseEvent<*> => void,
+  onHide?: SyntheticMouseEvent<*> => void,
   children: React$Node
 };
 
