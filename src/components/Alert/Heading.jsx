@@ -7,7 +7,7 @@ type PropsType = {
   /**
    * You can use a custom element type for this component.
    */
-  as: React$Element<*> | string
+  as: React$ComponentType<*> | string
 };
 
 const WTHeading = (props: PropsType) => (<Alert.Heading {...props} />);

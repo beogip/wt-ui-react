@@ -25,7 +25,7 @@ type PropsType = {
    * If providing a custom, non DOM, component. the `show`, `close` and `alignRight` props
    * are also injected and should be handled appropriatedly.
    */
-  as: React$Element<*> | string
+  as: React$ComponentType<*> | string
 };
 
 const WTMenu = (props: PropsType) => <BsMenu {...props} />;

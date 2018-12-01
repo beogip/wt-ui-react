@@ -5,7 +5,7 @@ import NavItem from 'react-bootstrap/lib/NavItem';
 type PropsType = {
   /** The ARIA role of the component */
   role?: string,
-  as: React$Element<*> | string
+  as: React$ComponentType<*> | string
 };
 
 const WTItem = (props: PropsType) => (

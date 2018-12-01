@@ -3,7 +3,7 @@ import React from 'react';
 import BsTabContent from 'react-bootstrap/lib/TabContent';
 
 type PropsType = {
-  as: React$Element<*> | string
+  as: React$ComponentType<*> | string
 };
 
 const WTContent = (props: PropsType) => (

@@ -57,7 +57,7 @@ type PropsType = {
      */
     navbar?: boolean,
 
-    as: React$Element<*> | string
+    as: React$ComponentType<*> | string
   };
 
 const WTNav = (props: PropsType) => (
