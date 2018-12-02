@@ -1,6 +1,6 @@
 /* @flow */
 import React from 'react';
-import Alert from 'react-bootstrap/lib/Alert';
+import BSModalTitle from 'react-bootstrap/lib/ModalTitle';
 
 
 type PropsType = {
@@ -10,11 +10,11 @@ type PropsType = {
   as: React$ComponentType<*> | string
 };
 
-const WTHeading = (props: PropsType) => (<Alert.Heading {...props} />);
+const WTTitle = (props: PropsType) => (<BSModalTitle {...props} />);
 
-WTHeading.defaultProps = {
+WTTitle.defaultProps = {
   as: 'h4',
 };
 
 
-export default WTHeading;
+export default WTTitle;

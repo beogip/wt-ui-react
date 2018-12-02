@@ -47,7 +47,7 @@ type PropsType = {
   /**
    * Set a custom element for this component.
    */
-  as: React$Element<*> | string,
+  as: React$ComponentType<*> | string,
 
   /**
    * A callback fired when the `<Navbar>` body collapses or expands. Fired when

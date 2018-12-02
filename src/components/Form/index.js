@@ -14,7 +14,7 @@ type PropsType = {
   /**
    * You can use a custom element type for this component.
    */
-  as: React$Element<*> | string,
+  as: React$ComponentType<*> | string,
   /**
    * Display the series of labels, form controls, and buttons on a single horizontal row.
    */

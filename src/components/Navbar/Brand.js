@@ -11,7 +11,7 @@ type PropsType = {
    */
   children?: React$Node,
 
-  as: React$Element<*> | string
+  as: React$ComponentType<*> | string
 };
 
 const WTBrand = (props: PropsType) => (

@@ -6,7 +6,7 @@ type PropsType = {
   /**
    * You can use a custom element type for this component.
    */
-  as: React$Element<*> | string,
+  as: React$ComponentType<*> | string,
   /**
    * The Form ref will be forwarded to the underlying element, which means,
    * unless it's rendered as a composite component, it will be a DOM node,

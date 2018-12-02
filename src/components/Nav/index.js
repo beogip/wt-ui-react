@@ -57,7 +57,11 @@ type PropsType = {
      */
     navbar?: boolean,
 
-    as: React$Element<*> | string,
+    as: React$ComponentType<*> | string,
+
+    /**
+     * Adds translate animation, useful for navbar items.
+     */
     animated: boolean
   };
 
