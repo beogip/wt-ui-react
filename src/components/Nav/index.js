@@ -57,13 +57,22 @@ type PropsType = {
      */
     navbar?: boolean,
 
-    as: React$ComponentType<*> | string
+    as: React$ComponentType<*> | string,
+
+    /**
+     * Adds translate animation, useful for navbar items.
+     */
+    animated: boolean
   };
 
-const WTNav = (props: PropsType) => (
-  <BsNav {...props} />
-);
+const WTNav = (props: PropsType) => {
+  const { animated, ...restProps } = props;
+  const style = animated ? { transform: 'translateX(126px)' } : {};
 
+  return (
+    <BsNav {...restProps} style={style} />
+  );
+};
 WTNav.Item = WTItem;
 WTNav.Link = WTLink;
 WTNav.Dropdown = WTNavDropdown;
@@ -71,6 +80,7 @@ WTNav.Dropdown = WTNavDropdown;
 mapDisplayNames(WTNav);
 
 WTNav.defaultProps = {
+  animated: false,
   justify: false,
   fill: false,
   as: 'ul',

@@ -1,5 +1,7 @@
+/* eslint-disable flowtype/no-weak-types */
 // @flow
 import React from 'react';
+import { findDOMNode } from 'react-dom';
 import BsNavbar from 'react-bootstrap/lib/Navbar';
 import mapDisplayNames from 'utils/componentNames';
 import WTBrand from './Brand';
@@ -12,7 +14,7 @@ type PropsType = {
    * Use in combination with the `bg` prop, `background-color` utilities,
    * or your own background styles.
    */
-  variant: 'light' | 'dark',
+  variant: 'light' | 'dark' | 'animated',
 
   /**
    * The breakpoint, below which, the Navbar will collapse.
@@ -93,25 +95,68 @@ type PropsType = {
    * The ARIA role for the navbar, will default to 'navigation' for
    * Navbars whose `as` is something other than `<nav>`.
    */
-  role?: string
+  role?: string,
+  /**
+   * extra classes for custom styling.
+   */
+  className?: 'light' | 'dark'
 };
 
-const WTNavbar = (props: PropsType) => (
-  <BsNavbar {...props} />
-);
+type StateType = {
+  internalVariant: 'light' | 'dark'
+};
+class WTNavbar extends React.Component<PropsType, StateType> {
+  static defaultProps = {
+    as: 'nav',
+    expand: true,
+    variant: 'light',
+    collapseOnSelect: false,
+  }
 
-WTNavbar.Brand = WTBrand;
-WTNavbar.Toggle = WTToggle;
-WTNavbar.Collapse = WTCollapse;
+  static Brand = WTBrand;
+
+  static Toggle = WTToggle;
+
+  static Collapse = WTCollapse;
+
+  constructor(props: PropsType) {
+    super(props);
+    this.state = {
+      internalVariant: props.variant === 'animated' ? 'dark' : props.variant,
+    };
+  }
+
+  componentDidMount() {
+    // eslint-disable-next-line react/no-find-dom-node
+    this.navbar = (findDOMNode(this): any);
+    window.addEventListener('scroll', this.animateNavbar);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.animateNavbar);
+  }
+
+  animateNavbar = () => {
+    const { variant } = this.props;
+    if (!this.navbar || variant !== 'animated') return;
+    if (window.pageYOffset > this.navbar.offsetHeight) {
+      this.setState({ internalVariant: 'light' });
+      return;
+    }
+    this.setState({ internalVariant: 'dark' });
+  }
+
+  navbar: ?HTMLElement
+
+  render() {
+    const { variant, ...restProps } = this.props;
+    const { internalVariant } = this.state;
+    return (
+      <BsNavbar variant={internalVariant} {...restProps} />
+    );
+  }
+}
 
 mapDisplayNames(WTNavbar);
-
-WTNavbar.defaultProps = {
-  as: 'nav',
-  expand: true,
-  variant: 'light',
-  collapseOnSelect: false,
-};
-
 
 export default WTNavbar;
