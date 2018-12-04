@@ -1,6 +1,6 @@
 {
   "name": "@windingtree/wt-ui-react",
-  "version": "0.9.4",
+  "version": "0.10.0",
   "description": "React framework",
   "main": "lib/index.js",
   "scripts": {
