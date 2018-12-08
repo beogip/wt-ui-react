@@ -10,6 +10,8 @@ import WTLink from './Link';
 import WTSubtitle from './Subtitle';
 import WTText from './Text';
 import WTTitle from './Title';
+import WTFooter from './Footer';
+import WTHeader from './Header';
 
 type PropsType = {
   /**
@@ -43,6 +45,8 @@ WTCard.Link = WTLink;
 WTCard.Subtitle = WTSubtitle;
 WTCard.Title = WTTitle;
 WTCard.Text = WTText;
+WTCard.Footer = WTFooter;
+WTCard.Header = WTHeader;
 mapDisplayNames(WTCard);
 
 WTCard.defaultProps = {
